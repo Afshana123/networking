@@ -154,7 +154,7 @@ There are 7 layers of the OSI Model and each one of these layers have a differen
       - considered reliable and ensures that all data arrives at the destination
       -  
     - UDP: User Dataground Protocol
-        - Some data is delivered but not all for situations where we don't really care whether the data has been delivered or not. e.g watching a live show and then you lost Bites then the screen or sound just goes off for a few second
+        - Some data is delivered but not all situations care whether the data has been delivered or not. e.g watching a live show and then you lost Bites then the screen or sound just goes off for a few second
         - Doesn't provide reliability and flow control but considered to be faster than TCP
     
 Application Layer
