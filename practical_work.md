@@ -6,7 +6,10 @@ A switch is in the data link layer which means it does not understand IP address
 
 When a switch doesn't know where to send the data, it will send it to everybody. 
 
+## ICMP
 `ping` is a tool that relies on a protocol called ICMP (Internet Control Messaging Protocol) - used to find out whether the computer is up and running - it is blocked from outside the network because it is used for hacking (for security precautions) - it is a network layer protocol
+
+## ARP
 
 ARP (Address Resolution Protocol) - is a protocol that is used to find the MAC address that corresponds to the IP address. ARP broadcasts to the whole network that it needs the MAC address for the IP address. ARP works in broadcast mode. 
 
@@ -36,6 +39,14 @@ Router is a computer has two network cards and has the ability to do the routing
 Any computer you have, you can turn it into a computer. 
 
 Router can block the broadcast 
+
+## What is a server? 
+A server is a piece of computer hardware or software that provides functionality for other programs or devices such as sharing data or resources among multiple clients. 
+
+## Difference between a server and a router?
+A router is a machine that sits between networks. When it receives a packet it will look at the destination address and decide how to to send the packet there.
+
+A server is an endpoint on a network just like your PC or cell phone is. A server receives a request and performs some sort of action, such as sending you a web page.
 
 ## Adding the router 
 Choose 2911 
@@ -70,7 +81,6 @@ To check which ports you are connected to:
 Options > Preferences > Always show port labels in logical workspace 
 
 
-
 ## What is a default gateway?
 The first place the traffic will go to if it doesn't know where to go
 For a host is where the traffic should be sent if the destination is not on your network
@@ -81,14 +91,19 @@ Don't make your default ip the same as the broadcast domain ip address - make it
 
 ## Explanation of the ARP
 
-ARP sends a signal and sees who has got the IP
-The router will receive the broadcast request and act like a hos
-idea of a switch - if it doesn't know where the request is supposed to go then it sends it to everyone 
-send its to everyone in the broadcast domain
+ARP sends a signal and sees who have got the IP address 
 
-PC0 sending a request to PC3.1
-PC0 found out that its not on the same network so now it communicates with the router - gets the mac address of the router and router behvaes a host - whenever the device understands IP addresses, it will stop the broadcast. only switches in layer 3 dont understand the broadcast - to commucation with pc3, we had to do 3 broadcasts - the routers communicate to exchange data - it needs the mac address of the router in order to communicate - router will check the the static routing - router 1 recognised the network and send an ARP broadcast 
+The router will receive the broadcast request and act like a host
 
-Many attacks happens on ARP and ICMP 
-PCO NEEDS TO KNOW THE MAC ACCDRESS of interface that takes place on router 1 and then router 1 will need know the interface of the MAC address at router 1 and router 1 recognises the network and will need to know the MAC adrress interface at PC1
+The idea of a switch is that if it doesn't know where the request is supposed to go then it sends it to everyone in the broadcast domain. 
+
+For example in our three switch packet tracer exercises we did:
+
+PC0 sends a request to PC3.1
+PC0 found out that its not on the same network so now it communicates with the router - gets the mac address of the router and the router behaves as a host - whenever the device understands the IP address, it will stop the broadcast. 
+
+only switches in layer 3 don't understand the broadcast - to commucation with pc3, we had to do 3 broadcasts - the routers communicate to exchange data - it needs the mac address of the router in order to communicate - router will check the static routing - router 1 recognised the network and send an ARP broadcast 
+
+Many attacks happen on ARP and ICMP
+
 
